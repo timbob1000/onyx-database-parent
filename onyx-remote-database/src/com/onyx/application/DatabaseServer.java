@@ -10,8 +10,8 @@ import com.onyx.server.auth.DefaultAuthenticationManager;
 import com.onyx.server.base.AbstractDatabaseServer;
 import com.onyx.server.base.ServerState;
 import com.onyx.server.cli.CommandLineParser;
-import com.onyx.util.EncryptionUtil;
 import com.onyx.server.rmi.OnyxRMIServer;
+import com.onyx.util.EncryptionUtil;
 
 
 /**
@@ -147,6 +147,16 @@ public class DatabaseServer extends AbstractDatabaseServer implements OnyxServer
         rmiServer.stop();
         persistenceManagerFactory.close();
         super.stop();
+    }
+
+    /**
+     * Getter for Persistence Manager Factory
+     *
+     * @return Embedded Database Persistence Manager
+     * @since 1.2.2
+     */
+    public PersistenceManager getPersistenceManager() {
+        return this.persistenceManagerFactory.getPersistenceManager();
     }
 }
 
