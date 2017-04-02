@@ -94,6 +94,8 @@
         <module>onyx-remote-driver</module>
         <module>onyx-database-tests</module>
         <module>onyx-database-examples</module>
+        <module>onyx-database-moe</module>
+        <module>onyx-remote-driver-moe</module>
     </modules>
 
     <build>

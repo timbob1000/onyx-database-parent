@@ -2,7 +2,7 @@ package java.util.function;
 
 /**
  * Created by tosborn1 on 3/7/17.
- *
+ * <p>
  * This class is added because Android library requires to be compiled with
  * the functional interface definitions.
  *
